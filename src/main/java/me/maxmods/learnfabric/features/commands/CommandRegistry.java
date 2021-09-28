@@ -1,5 +1,6 @@
 package me.maxmods.learnfabric.features.commands;
 //https://clients.0x150.cf/basics/modules#making-the-modules
+import me.maxmods.learnfabric.features.commands.impl.Help;
 import me.maxmods.learnfabric.features.commands.impl.ModList;
 import me.maxmods.learnfabric.features.commands.impl.Test;
 import me.maxmods.learnfabric.features.commands.impl.Toggle;
@@ -22,9 +23,12 @@ public class CommandRegistry {
         COMMANDS.add(command);
     }
     void registerCommands(){
+        //Client itself
         register(new Test());
         register(new Toggle());
         register(new ModList());
+        register(new Help());
+        //Something else
     }
 
     public Command getByName(String name) {
