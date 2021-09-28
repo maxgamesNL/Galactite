@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.maxmods.learnfabric.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "ClientPlayerEntityMixin",
+    "GameRendererMixin",
+    "InGameHudMixin",
+    "MinecraftClientMixin",
+    "ScreenMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

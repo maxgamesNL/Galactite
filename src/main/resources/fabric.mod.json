@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "learnfabric",
+  "version": "${version}",
+  "name": "LearnFabric",
+  "description": "",
+  "authors": ["MaxMods"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.maxmods.learnfabric.client.LearnFabricClient"
+    ],
+    "main": [
+      "me.maxmods.learnfabric.LearnFabric"
+    ]
+  },
+  "mixins": [
+    "LearnFabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": "*",
+    "minecraft": "1.17.1"
+  }
+}
