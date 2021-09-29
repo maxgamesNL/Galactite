@@ -6,7 +6,7 @@ import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.text.Text;
 
 public class Help extends Command {
-    public Help(){super("Help", "Helps people", "guide", "hello", "galactite");}
+    public Help(){super("Help", "Helps people", "guide", "hello", "galactite", "help");}
 
     @Override
     public void execute(String[] args) {

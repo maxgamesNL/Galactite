@@ -8,7 +8,7 @@ import net.minecraft.text.Text;
 
 public class ModList extends Command {
     public ModList(){
-        super("ModList", "Tells all Modules", "Modules", "Mods", "List");
+        super("ModList", "Tells all Modules", "Modules", "Mods", "List", "ModList");
     }
 
     @Override

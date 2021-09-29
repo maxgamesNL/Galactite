@@ -23,7 +23,7 @@ public class Freeze extends Module {
     @Override
     public void tick() {
         MinecraftClient.getInstance().player.setVelocity(0,0,0);
-        MinecraftClient.getInstance().player.sendMessage(Text.of("Tick of Freeze passed!"), false);
+        //MinecraftClient.getInstance().player.sendMessage(Text.of("Tick of Freeze passed!"), false);
     }
 //MinecraftClient.getInstance().player.sendMessage(Text.of("Tick of Freeze passed!"), true);
     @Override

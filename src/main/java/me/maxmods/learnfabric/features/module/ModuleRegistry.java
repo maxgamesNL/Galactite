@@ -4,7 +4,7 @@ package me.maxmods.learnfabric.features.module;
 
 import me.maxmods.learnfabric.features.module.impl.movement.Freeze;
 import me.maxmods.learnfabric.features.module.impl.movement.Hover;
-import me.maxmods.learnfabric.features.module.impl.movement.Speed;
+import me.maxmods.learnfabric.features.module.impl.movement.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class ModuleRegistry {
     void registerModules(){
         register(new Freeze());
         register(new Hover());
-        register(new Speed());
+        register(new Glide());
     }
 
     public Module getByName(String name){
