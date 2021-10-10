@@ -1,7 +1,7 @@
 package me.maxmods.learnfabric.features.gui;
 //totally didnt copy half of 0x's code: https://github.com/fartdev/Atomic/blob/master/src/main/java/me/zeroX150/atomic/feature/gui/ImGuiScreen.java
 //0x's code didnt work. switched to :https://www.youtube.com/watch?v=6jmxwRMb-aY
-//Imgui github: https://github.com/SpaiR/imgui-java/tree/v1.84.1.2
+//Imgui GitHub: https://github.com/SpaiR/imgui-java/tree/v1.84.1.2
 import imgui.ImGui;
 import imgui.flag.ImGuiCol;
 import imgui.gl3.ImGuiImplGl3;
@@ -22,12 +22,11 @@ public class TestGUI extends Screen {
     public static TestGUI INSTANCE;
     private final ImGuiImplGlfw implGlfw = new ImGuiImplGlfw();
     private final ImGuiImplGl3 implGl3 = new ImGuiImplGl3();
-    private long windowPtr;
     int x = 25;
 
     public TestGUI() {
         super(Text.of(" "));
-        windowPtr = MinecraftClient.getInstance().getWindow().getHandle();
+        long windowPtr = MinecraftClient.getInstance().getWindow().getHandle();
         INSTANCE = this;
         ImGui.createContext();
         implGlfw.init(windowPtr, true);
@@ -107,5 +106,6 @@ public class TestGUI extends Screen {
 
     public void onClose() {
         super.onClose();
+
     }
 }

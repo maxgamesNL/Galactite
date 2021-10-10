@@ -9,6 +9,7 @@ import net.minecraft.client.util.math.MatrixStack;
 
 public class OpenGUI extends Module {
     int i = 0;
+    boolean turnedOn = false;
     public OpenGUI(){
         super("OpenGui", ModuleRegistry.getInstance().getCategoryByName("GUI"), ": Open the gui");
     }
@@ -20,15 +21,15 @@ public class OpenGUI extends Module {
 
     @Override
     protected void disable() {
-
+        turnedOn = false;
     }
 
     @Override
     public void tick() {
         MinecraftClient instance = MinecraftClient.getInstance();
         i++;
-        if (i>10){
-            i=0;
+        if (i > 2) {
+            i = 0;
             setEnabled(false);
             instance.setScreen(new TestGUI());
 
@@ -43,5 +44,10 @@ public class OpenGUI extends Module {
     @Override
     public void renderHud() {
 
+    }
+
+    @Override
+    public void setEnabled(boolean enabled) {
+        super.setEnabled(enabled);
     }
 }
