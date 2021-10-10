@@ -5,9 +5,11 @@ import net.minecraft.client.util.math.MatrixStack;
 
 public abstract class Module {
     boolean isEnabled = false;
-    String name, description;
-    public Module(String name, String description){
+    String name ,description;
+    Category category;
+    public Module(String name, Category category, String description){
         this.name = name;
+        this.category = category;
         this.description = description;
     }
     protected abstract void enable();
@@ -21,6 +23,9 @@ public abstract class Module {
     }
     public String getName(){
         return name;
+    }
+    public Category getCategory(){
+        return category;
     }
     public boolean isEnabled(){
         return isEnabled;}

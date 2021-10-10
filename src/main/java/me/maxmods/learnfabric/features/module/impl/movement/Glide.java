@@ -1,6 +1,8 @@
 package me.maxmods.learnfabric.features.module.impl.movement;
 
 import me.maxmods.learnfabric.features.module.Module;
+import me.maxmods.learnfabric.features.module.ModuleRegistry;
+import me.maxmods.learnfabric.features.module.impl.Categories.Movement;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.Text;
@@ -8,7 +10,7 @@ import net.minecraft.util.math.Vec3d;
 
 public class Glide extends Module {
     public Glide(){
-        super("Glide", ": Makes you Glide fast!");
+        super("Glide", ModuleRegistry.getInstance().getCategoryByName("Movement"),": Makes you Glide fast!");
     }
 
     @Override

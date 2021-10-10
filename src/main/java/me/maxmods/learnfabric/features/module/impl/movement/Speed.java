@@ -1,13 +1,16 @@
 package me.maxmods.learnfabric.features.module.impl.movement;
 
 import me.maxmods.learnfabric.features.module.Module;
+import me.maxmods.learnfabric.features.module.ModuleRegistry;
+import me.maxmods.learnfabric.features.module.impl.Categories.Movement;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.widget.ClickableWidget;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.Text;
 
 public class Speed extends Module {
-    public Speed(){super("speed", ": Makes you go brrrrt");}
+    public Speed(){super("speed", ModuleRegistry.getInstance().getCategoryByName("Movement"), ": Makes you go brrrrt");}
 
     ClientPlayerEntity player = MinecraftClient.getInstance().player;
     float newMovementSpeed = 3f;
@@ -27,6 +30,8 @@ public class Speed extends Module {
 
         }
     }
+
+
 
     @Override
     public void renderHud() {

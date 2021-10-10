@@ -1,13 +1,16 @@
 package me.maxmods.learnfabric.features.module.impl.movement;
 
+import me.maxmods.learnfabric.features.module.Category;
 import me.maxmods.learnfabric.features.module.Module;
+import me.maxmods.learnfabric.features.module.ModuleRegistry;
+import me.maxmods.learnfabric.features.module.impl.Categories.Movement;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.Text;
 
 public class Freeze extends Module {
     public Freeze(){
-        super("Freeze", ": Sets velocity to 0");
+        super("Freeze", ModuleRegistry.getInstance().getCategoryByName("Movement"),": Sets velocity to 0");
     }
 
     @Override
