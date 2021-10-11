@@ -1,5 +1,6 @@
 package me.maxmods.learnfabric;
 
+import imgui.ImGui;
 import net.fabricmc.api.ModInitializer;
 
 public class LearnFabric implements ModInitializer{

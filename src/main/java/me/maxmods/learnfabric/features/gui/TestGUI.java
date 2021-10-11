@@ -18,7 +18,6 @@ import java.util.Objects;
 
 public class TestGUI extends Screen {
 
-
     public static TestGUI INSTANCE;
     private final ImGuiImplGlfw implGlfw = new ImGuiImplGlfw();
     private final ImGuiImplGl3 implGl3 = new ImGuiImplGl3();
@@ -37,6 +36,7 @@ public class TestGUI extends Screen {
     }
 
 
+
     @Override
     public boolean isPauseScreen() {
         return false;
@@ -49,6 +49,7 @@ public class TestGUI extends Screen {
         implGlfw.newFrame();
         ImGui.newFrame();
         x = 25;
+
 
 
 
@@ -95,6 +96,7 @@ public class TestGUI extends Screen {
             ImGui.end();
 
         }
+        ImGui.endFrame();
         ImGui.render();
         implGl3.renderDrawData(Objects.requireNonNull(ImGui.getDrawData()));
 
@@ -106,6 +108,8 @@ public class TestGUI extends Screen {
 
     public void onClose() {
         super.onClose();
+
+
 
     }
 }

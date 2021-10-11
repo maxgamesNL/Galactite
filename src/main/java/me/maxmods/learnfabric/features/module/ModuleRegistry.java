@@ -43,6 +43,7 @@ public class ModuleRegistry {
         register(new Glide());
         register(new AutoSprint());
         register(new Speed());
+        register(new Fly());
         //hud
         register(new Speedometer());
         //GUI

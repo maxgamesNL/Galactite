@@ -7,17 +7,20 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.widget.ClickableWidget;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.text.Text;
 
 public class Speed extends Module {
     public Speed(){super("speed", ModuleRegistry.getInstance().getCategoryByName("Movement"), ": Makes you go brrrrt");}
 
     ClientPlayerEntity player = MinecraftClient.getInstance().player;
-    float newMovementSpeed = 3f;
 
     @Override
     public void enable() {
-        player.sendMessage(Text.of("Doesnt work yet. :("), false);
+        player.sendMessage(Text.of("Not ready yet"), false);
+        this.disable();
     }
 
     public void disable(){

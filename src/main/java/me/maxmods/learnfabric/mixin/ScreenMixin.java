@@ -12,9 +12,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import javax.swing.*;
 import java.util.Arrays;
-import java.util.Locale;
+
 
 @Mixin(Screen.class)
 public class ScreenMixin {
@@ -33,7 +32,7 @@ public class ScreenMixin {
                 MinecraftClient.getInstance().player.sendMessage(Text.of("No coemoent foent"), false);
             }else toExecute.execute(args);
             //Message to test if command is recognized
-            //MinecraftClient.getInstance().player.sendMessage(Text.of("You ran "+command+" with "+Arrays.toString(args)+" as arguments."), false);
+
 
         }
 
