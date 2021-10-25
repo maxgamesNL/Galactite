@@ -1,6 +1,8 @@
 package me.maxmods.learnfabric.features.module.impl.movement;
 
 import me.maxmods.learnfabric.features.module.Module;
+import me.maxmods.learnfabric.features.module.ModuleRegistry;
+import me.maxmods.learnfabric.features.module.impl.Categories.Movement;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.math.MatrixStack;
@@ -9,7 +11,7 @@ import net.minecraft.text.Text;
 public class Hover extends Module {
     private static KeyBinding keyBinding;
     public Hover(){
-        super("Hover", ": Makes you hover at a fixed height!");
+        super("Hover", ModuleRegistry.getInstance().getCategoryByName("Movement"),": Makes you hover at a fixed height!");
     }
 
     @Override
