@@ -15,7 +15,7 @@ import net.minecraft.util.math.Vec3d;
 
 public class Fly extends Module {
     public Fly(){
-        super("Fly", ModuleRegistry.getInstance().getCategoryByName("Movement"),"Makes you fly");
+        super("Fly", ModuleRegistry.getInstance().getCategoryByName("Movement"),": Makes you fly");
     }
 
     ClientPlayerEntity player = MinecraftClient.getInstance().player;

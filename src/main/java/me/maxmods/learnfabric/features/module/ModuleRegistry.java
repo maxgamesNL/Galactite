@@ -2,12 +2,14 @@ package me.maxmods.learnfabric.features.module;
 
 
 
-import me.maxmods.learnfabric.features.module.impl.Categories.GUI;
-import me.maxmods.learnfabric.features.module.impl.Categories.HUD;
-import me.maxmods.learnfabric.features.module.impl.Categories.Movement;
+import me.maxmods.learnfabric.features.gui.TestGUI;
+import me.maxmods.learnfabric.features.module.impl.Categories.*;
 import me.maxmods.learnfabric.features.module.impl.GUI.OpenGUI;
+import me.maxmods.learnfabric.features.module.impl.combat.KillAura;
+import me.maxmods.learnfabric.features.module.impl.exploits.NoFall;
 import me.maxmods.learnfabric.features.module.impl.hud.Speedometer;
 import me.maxmods.learnfabric.features.module.impl.movement.*;
+import net.minecraft.client.gui.screen.Screen;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,7 @@ public class ModuleRegistry {
     private static ModuleRegistry INSTANCE = null;
     List<Module> MODULES = new ArrayList<>();
     List<Category> CATEGORIES = new ArrayList<>();
+    public Screen loadedGUI = new TestGUI();
     public ModuleRegistry(){
         if(INSTANCE != null){
             throw new IllegalStateException("Module registry already exists");
@@ -34,6 +37,9 @@ public class ModuleRegistry {
         CATEGORIES.add(new GUI());
         CATEGORIES.add(new Movement());
         CATEGORIES.add(new HUD());
+        CATEGORIES.add(new Combat());
+        CATEGORIES.add(new Exploit());
+
     }
 
     void registerModules(){
@@ -48,6 +54,10 @@ public class ModuleRegistry {
         register(new Speedometer());
         //GUI
         register(new OpenGUI());
+        //Combat
+        register(new KillAura());
+        //Exploits
+        register(new NoFall());
     }
 
     public Module getByName(String name){

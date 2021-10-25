@@ -5,15 +5,16 @@ import me.maxmods.learnfabric.features.module.Module;
 import me.maxmods.learnfabric.features.module.ModuleRegistry;
 import me.maxmods.learnfabric.features.module.impl.Categories.GUI;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.math.MatrixStack;
 
 public class OpenGUI extends Module {
-    int i = 0;
-    boolean turnedOn = false;
     public OpenGUI(){
         super("OpenGui", ModuleRegistry.getInstance().getCategoryByName("GUI"), ": Open the gui");
     }
 
+
+    int x = 0;
     @Override
     protected void enable(){
 
@@ -21,19 +22,16 @@ public class OpenGUI extends Module {
 
     @Override
     protected void disable() {
-        turnedOn = false;
+
     }
 
     @Override
     public void tick() {
-        MinecraftClient instance = MinecraftClient.getInstance();
-        i++;
-        if (i > 2) {
-            i = 0;
-            setEnabled(false);
-            instance.setScreen(new TestGUI());
-
+        if (x > 4) {
+            MinecraftClient.getInstance().setScreen(TestGUI.INSTANCE);
+            this.disable();
         }
+        x++;
     }
 
     @Override
