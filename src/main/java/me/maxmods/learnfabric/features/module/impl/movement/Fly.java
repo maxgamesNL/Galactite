@@ -46,6 +46,7 @@ public class Fly extends Module {
             Vec3d velocity = player.getVelocity();
             NWH.sendPacket(new PlayerMoveC2SPacket.PositionAndOnGround(player.getX(), player.getY() - 0.2, player.getZ(), false));
             NWH.sendPacket(new PlayerMoveC2SPacket.PositionAndOnGround(player.getX(), player.getY() + 0.2, player.getZ(), false));
+
         }
         if (player.getY() % 1 == 0 ){
             if (player.isOnGround()){
