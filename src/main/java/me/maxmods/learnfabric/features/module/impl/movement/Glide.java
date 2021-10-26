@@ -25,23 +25,25 @@ public class Glide extends Module {
 
     @Override
     public void tick() {
-        if (!MinecraftClient.getInstance().player.isSneaking()) {
+        if (MinecraftClient.getInstance().player.isSneaking()){return;}
             Vec3d vel = MinecraftClient.getInstance().player.getVelocity();
             double newVelX = vel.x * 2;
             double newVelY = vel.y;
             double newVelZ = vel.z * 2;
             if (newVelX > 0.5) {
                 newVelX = 0.5;
-            } else if (newVelZ > 0.5) {
+            }
+            if (newVelZ > 0.5) {
                 newVelZ = 0.5;
-            } else if (newVelX < -0.5) {
+            }
+            if (newVelX < -0.5) {
                 newVelX = -0.5;
-            } else if (newVelZ < -0.5) {
+            }
+            if (newVelZ < -0.5) {
                 newVelZ = -0.5;
             }
             MinecraftClient.getInstance().player.setVelocity(newVelX, newVelY, newVelZ);
-            //MinecraftClient.getInstance().player.sendMessage(Text.of(" "+newVelX), false);
-        }
+
     }
 
     @Override
