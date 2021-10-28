@@ -8,6 +8,7 @@ import me.maxmods.learnfabric.features.module.impl.GUI.OpenGUI;
 import me.maxmods.learnfabric.features.module.impl.combat.KillAura;
 import me.maxmods.learnfabric.features.module.impl.exploits.NoFall;
 import me.maxmods.learnfabric.features.module.impl.hud.Speedometer;
+import me.maxmods.learnfabric.features.module.impl.misc.Panic;
 import me.maxmods.learnfabric.features.module.impl.movement.*;
 import net.minecraft.client.gui.screen.Screen;
 
@@ -39,6 +40,7 @@ public class ModuleRegistry {
         CATEGORIES.add(new HUD());
         CATEGORIES.add(new Combat());
         CATEGORIES.add(new Exploit());
+        CATEGORIES.add(new Misc());
 
     }
 
@@ -58,6 +60,8 @@ public class ModuleRegistry {
         register(new KillAura());
         //Exploits
         register(new NoFall());
+        //Misc
+        register(new Panic());
     }
 
     public Module getByName(String name){

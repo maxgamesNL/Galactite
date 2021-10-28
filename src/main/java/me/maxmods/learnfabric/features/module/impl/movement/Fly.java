@@ -44,8 +44,8 @@ public class Fly extends Module {
         if (bypassTimer > 10) {
             bypassTimer = 0;
             Vec3d velocity = player.getVelocity();
-            NWH.sendPacket(new PlayerMoveC2SPacket.PositionAndOnGround(player.getX(), player.getY() - 0.2, player.getZ(), false));
-            NWH.sendPacket(new PlayerMoveC2SPacket.PositionAndOnGround(player.getX(), player.getY() + 0.2, player.getZ(), false));
+            NWH.sendPacket(new PlayerMoveC2SPacket.PositionAndOnGround(player.getX(), player.getY() - 0.1, player.getZ(), false));
+            NWH.sendPacket(new PlayerMoveC2SPacket.PositionAndOnGround(player.getX(), player.getY() + 0.1, player.getZ(), false));
 
         }
         if (player.getY() % 1 == 0 ){
