@@ -7,6 +7,7 @@ import me.maxmods.learnfabric.features.module.impl.Categories.*;
 import me.maxmods.learnfabric.features.module.impl.GUI.OpenGUI;
 import me.maxmods.learnfabric.features.module.impl.combat.KillAura;
 import me.maxmods.learnfabric.features.module.impl.exploits.NoFall;
+import me.maxmods.learnfabric.features.module.impl.exploits.Phase;
 import me.maxmods.learnfabric.features.module.impl.hud.Speedometer;
 import me.maxmods.learnfabric.features.module.impl.misc.Panic;
 import me.maxmods.learnfabric.features.module.impl.movement.*;
@@ -60,6 +61,7 @@ public class ModuleRegistry {
         register(new KillAura());
         //Exploits
         register(new NoFall());
+        register(new Phase());
         //Misc
         register(new Panic());
     }
